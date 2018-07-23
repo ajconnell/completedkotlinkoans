@@ -16,8 +16,12 @@ fun todoTask10(): Nothing = TODO(
     documentation = doc10()
 )
 
+fun sortIntList(intList: List<Int>) : List<Int> {
+    return intList.sortedDescending()
+}
+
 fun task10(): List<Int> {
     val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, todoTask10())
-    return arrayList
+    return sortIntList(arrayList)
 }
+
