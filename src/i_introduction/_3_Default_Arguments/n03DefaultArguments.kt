@@ -1,9 +1,7 @@
 package i_introduction._3_Default_Arguments
 
-import com.sun.org.apache.xpath.internal.operations.Bool
 import util.TODO
 import util.doc2
-import java.util.*
 
 fun todoTask3(): Nothing = TODO(
     """

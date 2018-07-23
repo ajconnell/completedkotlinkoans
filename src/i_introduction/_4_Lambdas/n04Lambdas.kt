@@ -1,7 +1,5 @@
 package i_introduction._4_Lambdas
 
-import com.google.common.base.Predicate
-import com.google.common.collect.Iterables
 import util.TODO
 import util.doc4
 
