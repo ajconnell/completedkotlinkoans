@@ -8,14 +8,15 @@ fun example9() {
 // The same as
 fun whatFoldDoes(): Int {
     var result = 1
-    listOf(1, 2, 3, 4).forEach { element -> result = element * result}
+    listOf(1, 2, 3, 4).forEach { element -> result = element * result }
     return result
 }
 
-fun Shop.getSetOfProductsOrderedByEachCustomer(): Set<Product> {
+fun Shop.getSetOfProductsOrderedByEveryCustomer(): Set<Product> {
     // Return the set of products that were ordered by each of the customers
-    return customers.fold(allOrderedProducts, {
-        orderedByAll, customer ->
-        todoCollectionTask()
+    val allOrderedProducts =  customers.flatMap { it.orderedProducts }.toSet()
+    return customers.fold(allOrderedProducts, { resultToFold, customer ->
+        val orderedProductsForCustomer = customer.orders.flatMap { it.products }.toSet()
+        resultToFold.intersect(orderedProductsForCustomer)
     })
 }

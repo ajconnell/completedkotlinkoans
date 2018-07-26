@@ -6,7 +6,7 @@ import org.junit.Test
 
 
 class N22FoldKtTest {
-    @Test fun testGetProductsOrderedByAllCustomers() {
+    @Test fun testGetProductsOrderedByEveryCustomer() {
         val testShop = shop("test shop for 'fold'",
                 customer(lucas, Canberra,
                         order(idea),
@@ -17,6 +17,6 @@ class N22FoldKtTest {
                         order(youTrack)
                 )
         )
-        assertEquals(setOf(idea), testShop.getSetOfProductsOrderedByEachCustomer())
+        assertEquals(setOf(idea), testShop.getSetOfProductsOrderedByEveryCustomer())
     }
 }
