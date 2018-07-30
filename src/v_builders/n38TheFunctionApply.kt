@@ -9,7 +9,7 @@ fun todoTask38(): Nothing = TODO(
 )
 
 fun <T> T.myApply(f: T.() -> Unit): T {
-    return this.apply(f)
+    todoTask38()
 }
 
 fun buildString(): String {
